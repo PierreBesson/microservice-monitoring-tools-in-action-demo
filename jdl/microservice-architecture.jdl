@@ -26,6 +26,7 @@ application {
     buildTool maven,
     serverPort 8081,
     skipUserManagement true
+    testFrameworks [gatling]
   }
   entities Invoice, Shipment
 }
