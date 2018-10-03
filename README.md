@@ -6,7 +6,7 @@ Slides available at: [https://pierrebesson.github.io/microservice-monitoring-too
 
 - Start the stack: `cd docker && docker-compose up -d`
 - Scale the microservices: `docker-compose scale store-app=2 invoice-app=2`
-- Start gatling performance tests: `cd store && mvn gatling:execute`
+- Start gatling performance tests: `./download-gatling.sh && ./run-gatling.sh`
 
 ## Architecture
 
