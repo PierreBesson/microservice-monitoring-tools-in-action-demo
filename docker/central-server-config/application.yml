@@ -15,7 +15,7 @@ jhipster:
     metrics:
         logs: # report metrics in the logs
             enabled: true
-            report-frequency: 60 # in seconds
+            report-frequency: 10 # in seconds
 spring:
     zipkin:
         base-url: http://jhipster-zipkin:9411

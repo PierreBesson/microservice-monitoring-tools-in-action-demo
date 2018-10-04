@@ -6,11 +6,27 @@ Slides available at: [https://pierrebesson.github.io/microservice-monitoring-too
 
 - Start the stack: `cd docker && docker-compose up -d`
 - Scale the microservices: `docker-compose scale store-app=2 invoice-app=2`
-- Start gatling performance tests: `./download-gatling.sh && ./run-gatling.sh`
+
 
 ## Architecture
 
 ![architecture](./jhipster-microservice-monitoring-architecture.png)
+
+## Generate apps and build docker images
+
+Run `./generate-apps.sh`
+In every app directory, run `./mvnw package -Pprod,zipkin jib:dockerBuild` to build docker images
+
+## Generate sample traffic
+
+2 ways:
+
+- E2E tests with protractor (drives your chrome browser)
+- Load tests with Gatling, measure the performance of the app under high user load.
+
+Start Protractor tests: `cd store && npm run e2e`
+
+Start Gatling tests: `./download-gatling.sh && ./run-gatling.sh`
 
 ## Links
 
