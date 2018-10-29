@@ -1,0 +1,4 @@
+logging:
+    level:
+        com.jhipster: WARN
+        org.springframework.web: ERROR
